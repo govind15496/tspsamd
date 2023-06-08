@@ -54,6 +54,10 @@ const UserList: React.FC = () => {
     // Remove the user with the given userId from the users array
     const updatedUsers = users.filter((user) => user.id !== userId);
     setUsers(updatedUsers); // Update the user state
+
+    if (updatedUsers.length === 0) {
+      setLoading(true);
+    }
   };
 
   const handleLike = (userId: number) => {
@@ -110,13 +114,14 @@ const UserList: React.FC = () => {
               className="custom-card"
               key={user.id}
               style={{
-                width: 300,
+                borderRadius: "0",
                 borderWidth: "2px",
               }}
               cover={
                 <img
                   className="card-container"
                   style={{
+                    borderRadius: "0",
                     width: "100%",
                     height: "13em",
                     maxWidth: "100%",
