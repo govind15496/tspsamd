@@ -114,16 +114,16 @@ const UserList: React.FC = () => {
               className="custom-card"
               key={user.id}
               style={{
-                borderRadius: "0",
+                borderRadius: "2px",
                 borderWidth: "2px",
               }}
               cover={
                 <img
                   className="card-container"
                   style={{
-                    borderRadius: "0",
+                    borderRadius: "2px",
                     width: "100%",
-                    height: "13em",
+                    height: "200px",
                     maxWidth: "100%",
                     maxHeight: "100%",
                     backgroundColor: "#f5f5f5",
@@ -185,7 +185,7 @@ const UserList: React.FC = () => {
 
       <Modal
         title="Model User"
-        visible={isModalVisible}
+        open={isModalVisible}
         onOk={handleSave}
         onCancel={handleCancel}
       >
