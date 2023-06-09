@@ -106,7 +106,7 @@ const UserList: React.FC = () => {
   return (
     <>
       {loading ? (
-        <Spinner /> // Show a spinner when loading data
+        <Spinner />
       ) : (
         <div className="card-container">
           {users.map((user) => (
