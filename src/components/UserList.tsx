@@ -76,7 +76,7 @@ const UserList: React.FC = () => {
   };
 
   const handleEdit = (user: User) => {
-    // Set the editingUser state to the selected user and open the modal
+    // Set the editingUser state to the selected user and open the modals
     setEditingUser(user);
     setIsModalVisible(true);
     form.setFieldsValue(user); // Set the form fields with the user data
